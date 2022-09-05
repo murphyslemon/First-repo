@@ -18,7 +18,7 @@ area = length*width
 print("The perimeter of that rectangle is: " + str(perimetre) + "m, and the area is: " + str(area) + "m\u00b2")
 
 # Phase 4
-print("I will add, multiply and find the average of 3 chosen numbers: ")
+print("I will add, multiply and find the average of 3 chosen numbers")
 one = float(input("Give me your first number: "))
 two = float(input("Give me another number: "))
 three = float(input("And give me your third number: "))
