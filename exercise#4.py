@@ -1,23 +1,53 @@
+#problem 1
+n = 1
+while n <= 1000:
+    if n % 3 ==0:
+        print(n)
+    n=n+1
+
+#problem2
+inches = int(input("Input inches: "))
+while inches >= 0:
+    print(inches * 2.54)
+    inches = int(input("Input inches: "))
+    if inches < 0:
+        break
+
+
 #problem 3
-l = None
-s = None
+n = int(input("Please input a number, when finished press enter: "))
+l = n
+s = n
 
-while True:
-   n = input("Please input a number, when finished write done: ")
-   if n == "done":
-      break
+while n != "":
+    temp = input("Please input a number, when finished press enter: ")
+    if temp == "":
+        break
+    else:
+        n = int(temp)
+    if n > l:
+        l = n
+    if n < s:
+        s = n
 
-l = None
-s = None
+print("largest: ", l)
+print("smallest: ", s)
 
-command = input ("Please input a number, when finished press enter: ")
+#problem 4
+import random
+n = random.randint(0,10)
+g = int(input("What is your guess: "))
 
-while command != "":
-    command = input("Please input a number, when finished press enter: ")
-num = int(command)
-
-    largest = num if largest < num or largest == None else largest
-    smallest = num if smallest > num or smallest == None else smallest
+if g > n:
+    while g != n:
+        print("Lower")
+        g = int(input("What is your next guess: "))
+if g<n:
+    while g != n:
+        print("Higher")
+        g = int(input("What is your next guess: "))
+if g == n:
+    print("You are a legend!")
 
 #problem 5
 username = "python"
@@ -38,4 +68,22 @@ while answer1 != username and answer2 != password:
 else:
     print("Welcome")
 
-# 4th exercise problem 6 - montecarlo method
+#problem 6
+import random
+
+N = int(input("Give the number of random points: "))
+count = 0
+circle = 0
+square = 0
+
+while count != N:
+    count = count + 1
+    x = random.uniform(-1, 1)
+    y = random.uniform(-1, 1)
+    n = x ** 2 + y ** 2
+    if n < 1:
+        circle = circle + 1
+
+pi = 4*circle/N
+print("pi: " + str(pi))
+
