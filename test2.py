@@ -1,18 +1,20 @@
-#problem 4
-import random
+import math
+def ppsm(d, p):
+    sm = math.pi * ((d*0.01)/2)**2
+    psm = p/sm
+    return psm
 
-N = int(input("Give the number of random points: "))
-count = 0
-circle = 0
-square = 0
+d1 = float(input("What is the diameter of the first pizza: "))
+p1 = float(input("What is the price of the first price: "))
+d2 = float(input("What is the diameter of the second pizza: "))
+p2 = float(input("What is the price of the second pizza: "))
 
-while count != N:
-    count = count + 1
-    x = random.uniform(-1, 1)
-    y = random.uniform(-1, 1)
-    n = x ** 2 + y ** 2
-    if n < 1:
-        circle = circle + 1
+a = ppsm(d1, p1)
+b = ppsm(d2, p2)
 
-pi = 4*circle/N
-print("pi: " + str(pi))
+if a > b:
+    print("The second pizza is cheaper.")
+if a < b:
+    print("The first pizza is cheaper.")
+if a == b:
+    print("They are both the same price.")

@@ -74,7 +74,6 @@ import random
 N = int(input("Give the number of random points: "))
 count = 0
 circle = 0
-square = 0
 
 while count != N:
     count = count + 1

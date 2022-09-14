@@ -11,7 +11,7 @@ sl.append("banana")
 print(sl)
 print(sl.index("cheese"))
 
-name = []
+
 name = input("What is your name?")
 index = 0
 while name != "" and index < len(name):
@@ -19,7 +19,6 @@ while name != "" and index < len(name):
     index += 1
 
 name = []
-name = input("What is your name?")
 index = 0
 for name in range(0):
     print(name[index])
@@ -34,4 +33,4 @@ while num > 0:
         result *= n
         n -= 1
     if num>0:
-        print(result)
+        print("facorial: " + str(result))
