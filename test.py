@@ -1,11 +1,13 @@
-list = [65, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-list2=[]
-def func(list):
-    if i % 2 == 0:
-        list2.append(i)
-    return list2
+#problem 3
+airports = {}
+while True:
+    select = int(input("Enter what option you want to do. (1-3) \n1. Enter new airport\n2. Fetch existing airport\n3. Quit"))
+    if select == 1:
 
-for i in range(len(list)):
-    func(list)
-print(list2)
-print(list)
+    elif select == 2:
+
+    elif select == 3:
+        break
+
+    else:
+        print("Error, wrong input:")

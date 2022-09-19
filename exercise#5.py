@@ -10,14 +10,12 @@ for n in range(int(dice)):
 print("The sum of the " + str(dice) + " dice is equal to " + str(sum(list)))
 
 #problem 2
-
 list = []
 n = input("Give a number: ")
 while n != "":
     list.append(int(n))
     n = input("Give a number: ")
-    if n == "":
-        continue
+
 list.sort(reverse=True)
 print("The largest 5 of the numbers given are: " + str(list[:5]))
 

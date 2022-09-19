@@ -56,8 +56,7 @@ def func(list):
     if i % 2 == 0:
         list2.append(i)
     return list2
-
-for i in range(len(list)):
+for i in range(len(list) + 1):
     func(list)
 print(list2)
 print(list)
