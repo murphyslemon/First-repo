@@ -1,7 +1,7 @@
-airports = {"HEL":"Vantaa Airport"}
-print(airports)
-ICAO_code = input("What is the airports ICAO code: ")
-if ICAO_code in airports:
-    print(f"{ICAO_code} is {airports[ICAO_code]}.")
-else:
-    print("not found")
+#Write a program that asks the user to enter the ICAO codes of two airports.
+# The program prints out the distance between the two airports in kilometers.
+# The calculation is based on the airport coordinates fetched from the database.
+# Calculate the distance using the geopy library: https://geopy.readthedocs.io/en/stable/.
+# Install the library by selecting View / Tool Windows / Python Packages in your PyCharm IDE,
+# write geopy into the search field and finish the installation.
+
