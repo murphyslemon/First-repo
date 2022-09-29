@@ -1,19 +1,10 @@
 # #problem 1
-# Write a program that asks the user for a number of a month and then prints out the corresponding season
-# (spring, summer, autumn, winter). Save the seasons as strings into a tuple in your program.
-# We can define each season to last three months, December being the first month of winter.
-#
-# season = ('spring', 'summer', 'autumn', 'winter')
-# season
-# input("What month is it? ")
-#
-# #problem 2
-# Write a program that asks the user to enter names until he/she enters an empty string.
-# After each name is read the program either prints out New name or
-# Existing name depending on whether the name was entered for the first time.
-# Finally, the program lists out the input names one by one, one below another in any order.
-# Use the set data structure to store the names.
+seasons_of_the_year = ("summer", "summer", "autumn", "autumn", "autumn", "winter", "winter", "winter", "spring", "spring", "spring", "summer")
+season_number = int(input("Enter the month number(1-12): "))
+season = seasons_of_the_year[season_number - 1]
+print(f"Month number {season_number} is {season} in the southern hemisphere.")
 
+# #problem 2
 names = set()
 n = "ajdhf"
 while n != "":
@@ -29,3 +20,21 @@ print("The names in the list are: ")
 [print(i) for i in names]
 
 #problem 3
+airports = {}
+while True:
+    select = int(input("Enter what option you want to do. (1-3) \n1. Enter new airport\n2. Fetch existing airport\n3. Quit\nWhat do you want to do: "))
+    if select == 1:
+        airport_name = input("What is the airport name: ")
+        ICAO_code = input("What is the airport ICAO code: ")
+        airports[ICAO_code] = airport_name
+
+    elif select == 2:
+        ICAO_code = input("What is the airports ICAO code: ")
+        if ICAO_code in airports:
+            print(f"{ICAO_code} is {airports[ICAO_code]}.")
+        else:
+            print("not found")
+    elif select == 3:
+        break
+    else:
+        print("Error, wrong input:")
