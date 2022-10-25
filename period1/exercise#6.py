@@ -1,5 +1,6 @@
-#problem 1
 import random
+
+#problem 1
 def func():
     return random.randint(1, 6)
 
@@ -11,7 +12,6 @@ while y != 6:
 print(y)
 
 #problem 2
-import random
 def roll(z):
     return random.randint(1, z)
 
