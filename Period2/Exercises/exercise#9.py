@@ -96,10 +96,6 @@ print(f"Travelled distance is: {new_car.distance}")
 import random
 from prettytable import PrettyTable
 
-def print_car_details(list_of_cars):
-    for car in list_of_cars:
-        print(f"{car.registration_number}: {car.maximum_speed}: {car.distance}: {car.current_speed}")
-
 def raced_distance(list_of_cars):
     for car in list_of_cars:
         if car.distance > 10000:
@@ -111,6 +107,14 @@ def update_accelerate(list_of_cars):
         car.accelerate(random.randint(-10, 15))
         car.drive(1)
 
+def print_car_details(list_of_cars):
+    x = PrettyTable()
+    x.field_names = ["Registration Number", "Distance", "Current Speed"]
+    for car in list_of_cars:
+        x.add_row([car.registration_number, car.distance, car.current_speed])
+    print(x.get_string(sortby="Distance", reversesort=True))
+
+
 final_distance = 10000
 list_of_cars = []
 
@@ -119,7 +123,7 @@ for i in range(10):
 
 h = 0
 while True:
-    if  raced_distance(list_of_cars):
+    if raced_distance(list_of_cars):
         break
     update_accelerate(list_of_cars)
 
@@ -127,13 +131,6 @@ while True:
 
 print_car_details(list_of_cars)
 
-x = PrettyTable()
-x.field_names = ["Registration Number", "Distance", "Current Speed"]
-for car in list_of_cars:
-    x.add_row([car.registration_number, car.distance, car.current_speed])
 
-    
-    '''import prettytable
-    learn how to use this'''
 
 
