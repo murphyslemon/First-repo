@@ -94,6 +94,7 @@ print(f"Travelled distance is: {new_car.distance}")
 
 #Problem 4
 import random
+from prettytable import PrettyTable
 
 def print_car_details(list_of_cars):
     for car in list_of_cars:
@@ -126,6 +127,13 @@ while True:
 
 print_car_details(list_of_cars)
 
+x = PrettyTable()
+x.field_names = ["Registration Number", "Distance", "Current Speed"]
+for car in list_of_cars:
+    x.add_row([car.registration_number, car.distance, car.current_speed])
+
     
+    '''import prettytable
+    learn how to use this'''
 
 
