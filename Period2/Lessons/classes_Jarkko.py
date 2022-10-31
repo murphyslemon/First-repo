@@ -34,4 +34,6 @@ dont know how many variables will be created
 space for the variable is created only when u run the code
 
 association
+uses a class to refer to the another class
+they are completely separate from each
 '''
