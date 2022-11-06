@@ -58,8 +58,8 @@ class Building:
         self.elevator_list[elevator_number].go_to_floor(floor)
 
     def fire_alarm(self):
-        for _i in self.elevator_list:
-            _i.go_to_floor(self.bottom_floor)
+        for y in self.elevator_list:
+            y.go_to_floor(self.bottom_floor)
 
 b1 = Building(-3, 10, 2)
 
@@ -69,3 +69,16 @@ print(b1.elevator_list[1].floor)
 b1.fire_alarm()
 for x in range(len(b1.elevator_list)):
     print(f"Elevator {x+1} is on floor {b1.elevator_list[x].floor}.")
+
+#problem 4
+from exercise9 import Car
+class Race:
+    def __init__(self, name, race_distance, car_list):
+        pass
+
+    def hour_passes(self):
+        Car.accelerate(self.car_list)
+        for z in self.car_list:
+            z.drive(1)
+    
+    def race_finished():

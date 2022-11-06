@@ -107,7 +107,7 @@ def update_accelerate(list_of_cars):
         car.accelerate(random.randint(-10, 15))
         car.drive(1)
 
-def print_car_details(list_of_cars):
+def print_status(list_of_cars):
     x = PrettyTable()
     x.field_names = ["Registration Number", "Distance", "Current Speed"]
     for car in list_of_cars:
@@ -129,8 +129,4 @@ while True:
 
     h += 1
 
-print_car_details(list_of_cars)
-
-
-
-
+print_status(list_of_cars)
