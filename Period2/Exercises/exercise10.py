@@ -125,7 +125,7 @@ list_of_cars = []
 for i in range(10):
     list_of_cars.append(Car("ABC-" + str(i+1), random.randint(100, 200)))
 
-r1 = Race("Grand Demolition Derby",8000, list_of_cars)
+r1 = Race("Grand Demolition Derby", 8000, list_of_cars)
 print(f"{r1.race_name} is {r1.race_distance}kms long.")
 
 print("Starting race")

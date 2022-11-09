@@ -66,4 +66,4 @@ print(f"Gasoline Car: {G1.registration_number} "
       f"\nCurrent speed: {G1.current_speed}km/h "
       f"\nDistance: {G1.distance}km")
 
-#str(E1)
+# E1.__str__()
