@@ -1,6 +1,6 @@
-import requests
 import json
 import textwrap
+import requests
 from api_storage import ex12_api_key
 
 # Problem 1
