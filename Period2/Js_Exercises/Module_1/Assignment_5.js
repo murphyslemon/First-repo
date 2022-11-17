@@ -13,3 +13,4 @@ if (year % 4 === 0) {
 } else {
     document.querySelector('#printing').innerHTML = `${year} is not a leap year.`;
 }
+
