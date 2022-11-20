@@ -1,4 +1,4 @@
-#Problem 1
+# Problem 1
 
 # class Car:
 #     def __init__(self, registration_number: str, maximum_speed: int):
@@ -12,7 +12,7 @@
 # print(new_car.registration_number)
 # print(new_car.maximum_speed)
 
-#Problem 1 & 2
+# Problem 1 & 2
 # class Car:
 #     def __init__(self, registration_number: str, maximum_speed: int):
 #         self.registration_number = registration_number
@@ -47,7 +47,7 @@
 # new_car.accelerate(-200)
 # print(new_car)
 
-#Problem 1 & 2 & 3
+# Problem 1 & 2 & 3
 class Car:
     def __init__(self, registration_number, maximum_speed: int):
         self.registration_number = registration_number
@@ -92,7 +92,7 @@ new_car.drive(1.5)
 print(new_car)
 print(f"Travelled distance is: {new_car.distance}")
 
-#Problem 4
+# Problem 4
 import random
 from prettytable import PrettyTable
 

@@ -1,7 +1,19 @@
 import json
 import textwrap
 import requests
-from api_storage import ex12_api_key
+import os
+import sys
+
+script_dir = os.path.dirname(__file__)
+mymodule_dir = os.path.join(script_dir, '..', 'alpha', 'beta')
+sys.path.append('C:/Users/murph/school_files/Procedural_Programming/first_repository')
+# sys.path.extend(['C:\\Users\\murph\\school_files\\Procedural_Programming\\first_repository',
+# 'C:\\Users\\murph\\school_files\\Procedural_Programming\\first_repository',
+# 'C:/Users/murph/school_files/Procedural_Programming/first_repository'])
+
+# import api_storage
+
+# api_storage.ex12_api_key
 
 # Problem 1
 request1 = "https://api.chucknorris.io/jokes/random"

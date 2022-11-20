@@ -38,7 +38,7 @@ class ElectricCar(Car):
         self.battery_capacity = battery_capacity
         super().__init__(registration_number, maximum_speed)
 
-#working progress
+# working progress
     # def __str__(self):
     #     return "Electric Car: " + str(self.registration_number) + "\nCurrent speed: " + str(
     #         self.current_speed) + "km/h \nDistance: " + str(self.distance) + "km"

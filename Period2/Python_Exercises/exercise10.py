@@ -1,4 +1,4 @@
-#problem 1
+# problem 1
 # class Elevator:
 #     def __init__(self):
 #         self.floor = 0
@@ -26,7 +26,7 @@
 # e.go_to_floor(-3)
 # e.go_to_floor(0)
 
-#problem 2
+# problem 2
 # class Building:
 #     def __init__(self, bottom_floor, top_floor, number_of_elevators):
 #         self.elevator_list = []
@@ -44,7 +44,7 @@
 # b1.run_elevator(1, 4)
 # print(b1.elevator_list[1].floor)
 
-#problem 3
+# problem 3
 # class Building:
 #     def __init__(self, bottom_floor, top_floor, number_of_elevators):
 #         self.elevator_list = []
@@ -70,7 +70,7 @@
 # for x in range(len(b1.elevator_list)):
 #     print(f"Elevator {x+1} is on floor {b1.elevator_list[x].floor}.")
 
-#problem 4
+# problem 4
 import random
 from prettytable import PrettyTable
 
