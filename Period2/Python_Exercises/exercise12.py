@@ -1,15 +1,16 @@
 import json
 import textwrap
 import requests
-import os
-import sys
-
-script_dir = os.path.dirname(__file__)
-mymodule_dir = os.path.join(script_dir, '..', 'alpha', 'beta')
-sys.path.append('C:/Users/murph/school_files/Procedural_Programming/first_repository')
-# sys.path.extend(['C:\\Users\\murph\\school_files\\Procedural_Programming\\first_repository',
-# 'C:\\Users\\murph\\school_files\\Procedural_Programming\\first_repository',
-# 'C:/Users/murph/school_files/Procedural_Programming/first_repository'])
+# work in progress - how to import file from another directory
+# import os
+# import sys
+#
+# script_dir = os.path.dirname(__file__)
+# mymodule_dir = os.path.join(script_dir, '..', 'alpha', 'beta')
+# sys.path.append('C:/Users/murph/school_files/Procedural_Programming/first_repository')
+# # sys.path.extend(['C:\\Users\\murph\\school_files\\Procedural_Programming\\first_repository',
+# # 'C:\\Users\\murph\\school_files\\Procedural_Programming\\first_repository',
+# # 'C:/Users/murph/school_files/Procedural_Programming/first_repository'])
 
 # import api_storage
 
