@@ -9,7 +9,7 @@ function rollDice() {
 while (rolls.includes(6) !== true) {
     let x = rollDice();
     rolls.push(x);
-    ul.innerHTML += `<li> ${x} </li>`
+    ul.innerHTML += `<li> ${x} </li>`;
 }
 
 document.body.appendChild(ul);

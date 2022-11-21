@@ -10,8 +10,8 @@ participants.sort();
 const ol = document.createElement('ol');
 
 for (let i = 0; i < participants.length; i++){
-    ol.innerHTML += `<li> ${participants[i]} </li>`
+    ol.innerHTML += `<li> ${participants[i]} </li>`;
     }
 
-document.body.appendChild(ol)
+document.body.appendChild(ol);
 

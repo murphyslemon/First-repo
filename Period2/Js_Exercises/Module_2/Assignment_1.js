@@ -7,5 +7,5 @@ numbers[1] = +prompt("What is your fourth number?");
 numbers[0] = +prompt("What is your fifth number?");
 
 for (let a = 0; a < numbers.length; a++){
-    console.log(numbers[a])
+    console.log(numbers[a]);
     }
