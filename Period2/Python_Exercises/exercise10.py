@@ -83,7 +83,7 @@ class Car:
 
     def accelerate(self, change_of_speed):
         speed = self.current_speed + change_of_speed
-        if speed < self.maximum_speed and speed > 0:
+        if self.maximum_speed > speed > 0:
             self.current_speed += change_of_speed
         elif speed < 0:
             self.current_speed = 0
@@ -119,6 +119,7 @@ class Race:
         for car in list_of_cars:
             x.add_row([car.registration_number, car.distance, car.current_speed])
         print(x.get_string(sortby="Distance", reversesort=True))
+
 
 list_of_cars = []
 

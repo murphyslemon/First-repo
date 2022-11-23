@@ -1,44 +1,37 @@
-class ComputerGame:
-    def __init__(self, name: str, publisher: str, year: int):
-        self.name = name
-        self.publisher = publisher
-        self.year = year
+class Person:
+    def __init__(self, student_name, height):
+        self.student_name = student_name
+        self.height = height
+
+    def __str__(self):
+        return f"{self.student_name} who is {self.height}cm tall"
 
 
-class GameWarehouse:
-    def __init__(self):
-        self.__games = []
+class Classroom:
+    def __init__(self, class_name, *persons):
+        self.class_name = class_name
+        self.persons = persons
+        self.total_height = 0
+        for person in self.persons:
+            self.total_height += person.height
 
-    def add_game(self, game: ComputerGame):
-        self.__games.append(game)
-
-    def list_games(self):
-        return self.__games
+    def __str__(self):
+        return f"There are {len(self.persons)} students in the {self.class_name} classroom " \
+               f"and their combined height is {self.total_height} cm."
 
 
-class GameMuseum(GameWarehouse):
-    def __init__(self):
-        super().__init__()
+steve = Person("Steve", 200)
+john = Person("John", 175)
+adam = Person("Adam", 185)
+anna = Person("Anna", 155)
+lucy = Person("Lucy", 165)
 
-    def list_games(self):
-        gamelist = []
-        for game in super().list_games():
-            if game.year > 1980:
-                gamelist.append(game)
-        return gamelist
+maths = Classroom("maths", steve, john, lucy)
+# english = Classroom("english", steve, adam, lucy)
+# science = Classroom("science", steve, adam, anna, lucy)
+# art = Classroom("art", john, anna)
 
-    def print(self):
-        for game in super().list_games():
-            if game.year < 1990:
-                print(f"The museum has a collection of games after the year 1990:{game.name, game.publisher}")
-
-museum = GameMuseum()
-museum.add_game(ComputerGame("Pacman", "Namco", 1980))
-museum.add_game(ComputerGame("GTA 2", "Rockstar", 1999))
-museum.add_game(ComputerGame("Bubble Bobble", "Taito", 1986))
-museum2 = GameMuseum()
-museum2.add_game(ComputerGame("MineCraft", "Mojang", 2011))
-museum2.add_game(ComputerGame("Mario", "Nintendo", 1985))
-for game in museum.list_games():
-    print(game.name)
-museum2.print()
+print(maths)
+#print(english)
+#print(science)
+#print(art)
