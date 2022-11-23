@@ -1,4 +1,3 @@
-# Problem 1
 from flask import Flask, request, Response
 import json
 import mysql.connector
@@ -6,7 +5,7 @@ import mysql.connector
 app = Flask(__name__)
 app.config["JSON_SORT_KEYS"] = False
 #
-#
+# Problem 1
 # @app.route('/prime_number')
 # def prime_number():
 #     try:

@@ -9,10 +9,14 @@ class Candidate {
     }
 }
 
-var candidate = []
+let candidate = []
 for (let i = 0; i < totalCandidates; i++) {
-    candidate[i+1] = new Candidate();
-    listOfCandidates.push(candidate[i+1])
-    console.log(candidate[i+1])
+    candidate = new Candidate();
+    listOfCandidates.push(candidate)
+    console.log(candidate)
+}
+
+for (let i = 0; i < listOfCandidates.length; i++) {
+    console.log((i+1) + ": " + listOfCandidates[i]);
 }
 //unfinished
