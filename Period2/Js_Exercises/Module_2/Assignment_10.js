@@ -1,22 +1,22 @@
 'use strict';
 let totalCandidates = +prompt("How many candidates are there?");
 let listOfCandidates = []
+let totalVoters = +prompt("How many voters are there?");
 
-class Candidate {
-    constructor(votes = 0) {
-        this.name = prompt("Enter a candidate's name:");
-        this.votes = votes;
+for (let i = 0; i < totalCandidates; i++) {
+    listOfCandidates.push({
+        name: prompt(`What is candidate ${i+1}'s name:`),
+        votes: 0
+    })
+}
+
+for (let i = 0; i < totalVoters; i++) {
+    let vote = prompt("Enter your vote (one candidate's name):")
+    if (vote in listOfCandidates) {
+        name.votes += 1; //needs work
     }
 }
 
-let candidate = []
-for (let i = 0; i < totalCandidates; i++) {
-    candidate = new Candidate();
-    listOfCandidates.push(candidate)
-    console.log(candidate)
-}
-
-for (let i = 0; i < listOfCandidates.length; i++) {
-    console.log((i+1) + ": " + listOfCandidates[i]);
-}
-//unfinished
+listOfCandidates.forEach((candidate, index) => {
+    console.log(`${candidate.name}, ${candidate.votes}`)
+})
