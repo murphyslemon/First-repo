@@ -1,6 +1,6 @@
 'use strict';
 let totalCandidates = +prompt("How many candidates are there?");
-let listOfCandidates = []
+let listOfCandidates = [];
 let totalVoters = +prompt("How many voters are there?");
 
 for (let i = 0; i < totalCandidates; i++) {
@@ -11,12 +11,27 @@ for (let i = 0; i < totalCandidates; i++) {
 }
 
 for (let i = 0; i < totalVoters; i++) {
-    let vote = prompt("Enter your vote (one candidate's name):")
-    if (vote in listOfCandidates) {
-        name.votes += 1; //needs work
+    let vote = prompt(`Enter voter ${i+1}'s vote (one candidate's name):`);
+    for (let i = 0; i < listOfCandidates.length; i++) {
+        if (vote === listOfCandidates[i]["name"]) {
+            listOfCandidates[i]["votes"]++;
+        }
     }
 }
 
+let winningVotes = 0
+let winner = ''
+for (let i = 0; i < listOfCandidates.length; i++) {
+    if (listOfCandidates[i]["votes"] >= winningVotes) {
+        winningVotes = listOfCandidates[i]["votes"]
+        winner = listOfCandidates[i]["name"]
+    }
+}
+
+console.log(`The winner is ${winner} with ${winningVotes} votes.`)
+console.log('Results:')
 listOfCandidates.forEach((candidate, index) => {
-    console.log(`${candidate.name}, ${candidate.votes}`)
+    console.log(`${candidate.name}: ${candidate.votes} votes`);
 })
+
+
