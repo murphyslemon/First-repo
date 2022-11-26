@@ -19,16 +19,9 @@ for (let i = 0; i < totalVoters; i++) {
     }
 }
 
-let winningVotes = 0
-let winner = ''
-for (let i = 0; i < listOfCandidates.length; i++) {
-    if (listOfCandidates[i]["votes"] >= winningVotes) {
-        winningVotes = listOfCandidates[i]["votes"]
-        winner = listOfCandidates[i]["name"]
-    }
-}
+listOfCandidates.sort((a, b) => (b.votes - a.votes));
 
-console.log(`The winner is ${winner} with ${winningVotes} votes.`)
+console.log(`The winner is ${listOfCandidates[0]["name"]} with ${listOfCandidates[0]["votes"]} votes.`)
 console.log('Results:')
 listOfCandidates.forEach((candidate, index) => {
     console.log(`${candidate.name}: ${candidate.votes} votes`);
