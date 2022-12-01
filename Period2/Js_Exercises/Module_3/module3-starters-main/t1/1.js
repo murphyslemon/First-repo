@@ -1,8 +1,7 @@
-let ul = document.querySelector('#target');
-ul.innerHTML += "additional HTML code"
+const ul = document.querySelector('#target');
 const li =
             `<li>First item</li>
             <li>Second item</li>
             <li>Third item</li>`;
 ul.innerHTML = li;
-ul.classList.add("myList");
+ul.classList.add("my-list");
