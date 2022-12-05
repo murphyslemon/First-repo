@@ -1,34 +1,35 @@
-let new_str;
-const question = document.getElementById("calculation").value;;
-const p = document.querySelector('#result');
-const button = document.querySelector('button');
+// this works too
+// const button = document.getElementById('start');
+// const answer = document.querySelector('#result');
 
-button.addEventListener('click', function(evt) {
-    if (question.includes("+")) {
-        new_str = question.split("+");
-        let x = +(new_str[0]);
-        let y = +(new_str[1]);
-        let z = x + y;
-        console.log(z);
-        console.log(x);
-        console.log(y);
-    } else if (question.includes("-")) {
-        new_str = question.split("-");
-        let x = +(new_str[0]);
-        let y = +(new_str[1]);
-        p.innerHTML = `Answer: ${x - y}`
-    } else if (question.includes("*")) {
-        new_str = question.split("*");
-        let x = +(new_str[0]);
-        let y = +(new_str[1]);
-        p.innerHTML = `Answer: ${x * y}`
-    } else if (question.includes("/")) {
-        new_str = question.split("/");
-        let x = +(new_str[0]);
-        let y = +(new_str[1]);
-        p.innerHTML = `Answer: ${x / y}`
+// button.addEventListener('click', function () {
+//     let x = document.getElementById('calculation').value;
+//     let result = Function('return ' + x)();
+//     answer.innerHTML = result;
+// })
+
+document.querySelector('button').addEventListener('click', calculate);
+
+function calculate() {
+    const userInput = document.getElementById('calculation').value;
+    let sortedInput;
+    let result;
+
+    if (userInput.includes("+")) {
+        sortedInput = userInput.split("+");
+        result = +(sortedInput[0]) + +(sortedInput[1]);
     }
-})
-
-console.log(question)
-//doesnt work
+    else if (userInput.includes("-")) {
+        sortedInput = userInput.split("-");
+        result = +(sortedInput[0]) - +(sortedInput[1]);
+    }
+    else if (userInput.includes("*")) {
+        sortedInput = userInput.split("*");
+        result = +(sortedInput[0]) * +(sortedInput[1]);
+    }
+    else if (userInput.includes("/")) {
+        sortedInput = userInput.split("/");
+        result = +(sortedInput[0]) / +(sortedInput[1]);
+    }
+    document.getElementById('result').innerHTML = result;
+}
