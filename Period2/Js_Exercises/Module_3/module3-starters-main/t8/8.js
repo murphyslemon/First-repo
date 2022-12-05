@@ -13,18 +13,18 @@ function operations() {
 
     if (select.value === 'add'){
         let result = num1 + num2;
-        p.innerHTML = result;
+        p.innerHTML = `Answer: ${result}`;
     }
     if (select.value ==='sub'){
         let result = num1 - num2;
-        p.innerHTML = result;
+        p.innerHTML = `Answer: ${result}`;
     }
     if (select.value === 'multi'){
         let result = num1 * num2;
-        p.innerHTML = result;
+        p.innerHTML = `Answer: ${result}`;
     }
     if (select.value === 'div'){
         let result = num1 / num2;
-        p.innerHTML = result;
+        p.innerHTML = `Answer: ${result}`;
     } 
 }
