@@ -1,8 +1,10 @@
 from flask import Flask, request, Response
 import json
 import mysql.connector
+from flask_cors import CORS
 
 app = Flask(__name__)
+corse = CORS(app)
 app.config["JSON_SORT_KEYS"] = False
 #
 # Problem 1
