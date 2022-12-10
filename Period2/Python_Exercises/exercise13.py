@@ -4,7 +4,8 @@ import mysql.connector
 from flask_cors import CORS
 
 app = Flask(__name__)
-corse = CORS(app)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 app.config["JSON_SORT_KEYS"] = False
 #
 # Problem 1
@@ -71,7 +72,7 @@ def get_airport_info(icao):
 
 def get_airport(icao):
     try:
-        sql = "SELECT name, municipality from airport where ident = '" + icao + "'"
+        sql = "SELECT name, municipality, iso_country from airport where ident = '" + icao + "'"
         cursor = connection.cursor()
         cursor.execute(sql)
         result = cursor.fetchall()
@@ -81,7 +82,7 @@ def get_airport(icao):
             "Name:": result[0][0],
             "Location": result[0][1]
         }
-        return response
+        return {'ICAO': icao, 'Name': result[0][0], 'Location': result[0][1], 'Iso_country': result[0][2]}
 
     except ValueError:
         response = {
