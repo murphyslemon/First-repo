@@ -6,9 +6,7 @@ document.addEventListener('submit', async function(evt) {
     try {
         const proxy = 'https://api.allorigins.win/get?url=';
         const search = 'https://api.tvmaze.com/search/shows?q='+ inputValue;
-        console.log(search)
         const url = proxy + encodeURIComponent(search);
-        console.log(url)
         const response = await fetch(url);
         if (!response.ok) throw new Error('Invalid input!');
         const json = await response.json();
@@ -18,4 +16,3 @@ document.addEventListener('submit', async function(evt) {
     }
 });
 
-// step 2
