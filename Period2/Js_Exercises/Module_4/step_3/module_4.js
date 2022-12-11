@@ -20,17 +20,11 @@ document.addEventListener('submit', async function(evt) {
             container.appendChild(h2);
 
             const image = document.createElement('img');
-            try {
-                image.src = item['show']['image']['medium'];
-                image.alt = item['show']['name'];
-                container.appendChild(image);
-                console.log('not null');
-            } catch {
-                console.log('null');
-                image.src = 'https://via.placeholder.com/243x342?text=image';
-                image.alt = item['show']['name'];
-                container.appendChild(image);
-            }
+            image.src = item['show']['image'] ?
+                item['show']['image']['medium'] :
+                'https://via.placeholder.com/243x342?text=image'
+            image.alt = item['show']['name'];
+            container.appendChild(image);
 
             const genres = document.createElement('ul');
             for (let i = 0; i <= item['show']['genres'].length; i++){
