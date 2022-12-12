@@ -1,7 +1,23 @@
 body {
-    background-color: #1c1d1c;
+    background-color: grey;
     background-repeat: repeat;
     padding: 1%;
+}
+
+h4 {
+    display: inline;
+    font-size: larger;
+    color: white;
+}
+
+input {
+    display: inline;
+    float: right;
+}
+
+button {
+    display: inline;
+    float: right;
 }
 
 h1  {
@@ -9,16 +25,20 @@ h1  {
     margin-bottom: 1em;
     text-align: center;
     font-family: Georgia, Arial, Helvetica, serif;
+    font-size: xxx-large;
   }
 
 div {
     background-color: lightgrey;
     padding: 2.1%;
-    height: 800px;
+    height: 820px;
     width: 28%;
-    margin: 0.5%;
+    margin: 2.6%;
     float: left;
     text-align: center;
+    box-sizing: border-box;
+    border: black solid;
+    border-radius:10px;
 }
 
 h2  {
@@ -38,6 +58,10 @@ img {
     margin-right: auto;
 }
 
+h3 {
+    font-size: large;
+}
+
 ul {
     text-align: left;
     font-family: "Arial Black", Georgia, Arial;
@@ -49,11 +73,12 @@ p {
     width: 95%;
     text-align: center;
     color: black;
-    font-size: small;
+    font-size: 12px;
     font-family: Georgia, Arial, Helvetica, serif;
 
 }
 
 a {
     text-decoration: none;
+    font-size: large;
 }

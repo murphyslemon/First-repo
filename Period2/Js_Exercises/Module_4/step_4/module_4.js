@@ -30,11 +30,9 @@ document.addEventListener('submit', async function(evt) {
             image.alt = item['show']['name'];
             container.appendChild(image);
 
-            const genres = document.createElement('ul');
-            for (let i = 0; i <= item['show']['genres'].length-1; i++){
-                genres.innerHTML += `<li> ${item['show']['genres'][i]} </li>`
-                }
-            container.appendChild(genres)
+            const genres = document.createElement('h3');
+            genres.innerHTML = item['show']['genres'].join(' | ');
+            container.appendChild(genres);
 
             const description = document.createElement('p');
             description.innerHTML = item['show']['summary'];
