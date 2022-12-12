@@ -35,7 +35,9 @@ document.addEventListener('submit', async function(evt) {
             container.appendChild(genres);
 
             const description = document.createElement('p');
-            description.innerHTML = item['show']['summary'];
+            description.innerHTML = item['show']['summary'] ?
+                `${item['show']['summary'].slice(0, 800)}...` :
+                item['show']['summary']
             container.appendChild(description);
 
             const link = document.createElement('a');
