@@ -1,0 +1,59 @@
+body {
+    background-color: #1c1d1c;
+    background-repeat: repeat;
+    padding: 1%;
+}
+
+h1  {
+    color: lightyellow;
+    margin-bottom: 1em;
+    text-align: center;
+    font-family: Georgia, Arial, Helvetica, serif;
+  }
+
+div {
+    background-color: lightgrey;
+    padding: 2.1%;
+    height: 800px;
+    width: 28%;
+    margin: 0.5%;
+    float: left;
+    text-align: center;
+}
+
+h2  {
+    color: black;
+    margin-bottom: .3em;
+    text-align: center;
+    text-decoration: underline;
+    font-family: Georgia, Arial, Helvetica, serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    text-align: left;
+    font-family: "Arial Black", Georgia, Arial;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    text-align: center;
+    color: black;
+    font-size: small;
+    font-family: Georgia, Arial, Helvetica, serif;
+
+}
+
+a {
+    text-decoration: none;
+}

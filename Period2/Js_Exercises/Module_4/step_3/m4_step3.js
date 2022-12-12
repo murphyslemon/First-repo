@@ -27,7 +27,7 @@ document.addEventListener('submit', async function(evt) {
             container.appendChild(image);
 
             const genres = document.createElement('ul');
-            for (let i = 0; i <= item['show']['genres'].length; i++){
+            for (let i = 0; i <= item['show']['genres'].length-1; i++){
                 genres.innerHTML += `<li> ${item['show']['genres'][i]} </li>`
                 }
             container.appendChild(genres)

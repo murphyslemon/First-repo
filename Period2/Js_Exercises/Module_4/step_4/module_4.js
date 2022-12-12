@@ -1,5 +1,5 @@
 'use strict';
-// step 3
+// step 4
 document.addEventListener('submit', async function(evt) {
     evt.preventDefault();
     const inputValue = document.querySelector('#query').value;
@@ -13,8 +13,12 @@ document.addEventListener('submit', async function(evt) {
         const result = await response.json();
         const dataFromAPI = JSON.parse(result.contents);
 
+        const results = document.createElement('h1');
+        results.innerHTML = 'Results'
+        document.body.appendChild(results)
+
         for (let item of dataFromAPI) {
-            const container = document.createElement('show');
+            const container = document.createElement('div');
             const h2 = document.createElement('h2');
             h2.innerHTML = item['show']['name'];
             container.appendChild(h2);
@@ -27,7 +31,7 @@ document.addEventListener('submit', async function(evt) {
             container.appendChild(image);
 
             const genres = document.createElement('ul');
-            for (let i = 0; i <= item['show']['genres'].length; i++){
+            for (let i = 0; i <= item['show']['genres'].length-1; i++){
                 genres.innerHTML += `<li> ${item['show']['genres'][i]} </li>`
                 }
             container.appendChild(genres)
@@ -39,7 +43,7 @@ document.addEventListener('submit', async function(evt) {
             const link = document.createElement('a');
             link.href = item['show']['url'];
             link.target = "_blank";
-            link.innerHTML = item['show']['url'];
+            link.innerHTML = 'Learn more';
             container.appendChild(link);
             document.body.appendChild(container)
         }
