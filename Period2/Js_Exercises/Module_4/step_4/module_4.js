@@ -14,38 +14,44 @@ document.addEventListener('submit', async function(evt) {
         const dataFromAPI = JSON.parse(result.contents);
 
         const results = document.createElement('h1');
-        results.innerHTML = 'Results'
-        document.body.appendChild(results)
+        results.innerHTML = 'Results';
+        document.body.appendChild(results);
 
-        for (let item of dataFromAPI) {
-            const container = document.createElement('div');
-            const h2 = document.createElement('h2');
-            h2.innerHTML = item['show']['name'];
-            container.appendChild(h2);
+        if (dataFromAPI.length === 0) {
+            const noResults = document.createElement('p');
+            noResults.innerHTML = "No results matching your search.";
+            document.body.appendChild(noResults);
+        } else {
+            for (let item of dataFromAPI) {
+                const container = document.createElement('div');
+                const h2 = document.createElement('h2');
+                h2.innerHTML = item['show']['name'];
+                container.appendChild(h2);
 
-            const image = document.createElement('img');
-            image.src = item['show']['image'] ?
-                item['show']['image']['medium'] :
-                'https://via.placeholder.com/243x342?text=image'
-            image.alt = item['show']['name'];
-            container.appendChild(image);
+                const image = document.createElement('img');
+                image.src = item['show']['image'] ?
+                    item['show']['image']['medium'] :
+                    'https://via.placeholder.com/243x342?text=image';
+                image.alt = item['show']['name'];
+                container.appendChild(image);
 
-            const genres = document.createElement('h3');
-            genres.innerHTML = item['show']['genres'].join(' | ');
-            container.appendChild(genres);
+                const genres = document.createElement('h3');
+                genres.innerHTML = item['show']['genres'].join(' | ');
+                container.appendChild(genres);
 
-            const description = document.createElement('p');
-            description.innerHTML = item['show']['summary'] ?
-                `${item['show']['summary'].slice(0, 800)}...` :
-                item['show']['summary']
-            container.appendChild(description);
+                const description = document.createElement('p');
+                description.innerHTML = item['show']['summary'] ?
+                    `${item['show']['summary'].slice(0, 800)}...` :
+                    item['show']['summary'];
+                container.appendChild(description);
 
-            const link = document.createElement('a');
-            link.href = item['show']['url'];
-            link.target = "_blank";
-            link.innerHTML = 'Learn more';
-            container.appendChild(link);
-            document.body.appendChild(container)
+                const link = document.createElement('a');
+                link.href = item['show']['url'];
+                link.target = "_blank";
+                link.innerHTML = 'Learn more';
+                container.appendChild(link);
+                document.body.appendChild(container);
+            }
         }
 
     } catch (error) {
