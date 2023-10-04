@@ -4,6 +4,9 @@ I created this repository in my first year of university because I wanted to lea
 The exercises cover various topics and languages, including:
 
 - Python
+  - using relational databases
+  - using external interfaces(API)
+  - Setting up a backend service with an interface
 - html
 - javascript
 - css
